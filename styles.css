@@ -1,0 +1,85 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2; /* Cor de fundo de exemplo */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, purple, red, pink, #1e1e3f); /* Gradiente animado */
+    color: white;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu {
+    background-color: #333;
+    text-align: center;
+    display: none;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: block;
+    padding: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.main {
+    padding: 20px;
+}
+
+/* Animações */
+@keyframes changeColor {
+    0% { background: linear-gradient(to right, purple, red, pink, #1e1e3f); }
+    25% { background: linear-gradient(to right, red, pink, #1e1e3f, purple); }
+    50% { background: linear-gradient(to right, pink, #1e1e3f, purple, red); }
+    75% { background: linear-gradient(to right, #1e1e3f, purple, red, pink); }
+    100% { background: linear-gradient(to right, purple, red, pink, #1e1e3f); }
+}
+
+header {
+    animation: changeColor 10s infinite;
+}
+
+.menu.show-menu {
+    display: block;
+    animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
